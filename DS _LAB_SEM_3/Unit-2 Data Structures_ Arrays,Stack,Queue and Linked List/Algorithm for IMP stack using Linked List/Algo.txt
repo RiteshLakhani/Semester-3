@@ -1,0 +1,35 @@
+Initialize Stack:
+    Avail = NULL
+    FIRST = NULL
+
+Push Method:
+    Input: X (data to be inserted)
+    Output: Address of the new node
+
+    If Avail is NULL, then
+        Write "Underflow"
+        Return NULL
+
+    NEW = Avail
+    Avail = LINK(Avail)
+
+    INFO(NEW) = X
+    LINK(NEW) = FIRST
+    FIRST = NEW
+
+    Return NEW
+
+Pop Method:
+    Output: Data of the popped node
+
+    If FIRST is NULL, then
+        Write "Underflow"
+        Return NULL
+
+    TEMP = FIRST
+    FIRST = LINK(FIRST)
+
+    Return INFO(TEMP)
+
+    LINK(TEMP) = Avail
+    Avail = TEMP
